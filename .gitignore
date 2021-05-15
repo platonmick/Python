@@ -1,0 +1,6 @@
+.idea
+checkmd5.log
+main.py
+out_checkmd5.json
+out_checkmd5.md5
+testdata
