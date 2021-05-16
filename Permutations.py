@@ -1,17 +1,19 @@
-def swap(list, i, j):
-    temp = list[i]
-    list[i] = list[j]
-    list[j] = temp
+def swap(array, i, j):
+    temp = array[i]
+    array[i] = array[j]
+    array[j] = temp
 
-def permutations(n, list):
-    numberOfElements = len(list)
+
+def permutations(n, elements):
+    number_of_elements = len(elements)
     if n == 1:
-        print(list)
+        print(elements)
     else:
-        for i in range(numberOfElements - n, numberOfElements):
-            swap(list, numberOfElements - n, i )
-            permutations(n - 1, list[0 : numberOfElements])
+        for i in range(number_of_elements - n, number_of_elements):
+            swap(elements, number_of_elements - n, i)
+            permutations(n - 1, elements[0: number_of_elements])
+
 
 if __name__ == "__main__":
-    list = [0, 1, 2, 3]
-    permutations(len(list), list)
+    input_list = [0, 1, 2, 3]
+    permutations(len(input_list), input_list)
